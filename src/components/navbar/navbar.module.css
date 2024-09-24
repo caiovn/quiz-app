@@ -1,0 +1,19 @@
+.nav {
+  margin: 0;
+  margin-bottom: 16px;
+  background-color: var(--color-surface-primary);
+}
+
+.nav > div {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 16px 32px;
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--color-text-inverse);
+}

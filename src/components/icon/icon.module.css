@@ -1,0 +1,25 @@
+.icon {
+  color: var(--color-icon-primary);
+}
+
+.icon-inverse {
+  color: var(--color-icon-inverse);
+}
+
+.icon-size-small {
+  font-size: var(--size-icon-neutral-small);
+  width: var(--size-icon-neutral-small);
+  height: var(--size-icon-neutral-small);
+}
+
+.icon-size-medium {
+  font-size: var(--size-icon-neutral-medium);
+  width: var(--size-icon-neutral-medium);
+  height: var(--size-icon-neutral-medium);
+}
+
+.icon-size-large {
+  font-size: var(--size-icon-neutral-large);
+  width: var(--size-icon-neutral-large);
+  height: var(--size-icon-neutral-large);
+}

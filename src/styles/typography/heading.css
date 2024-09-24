@@ -1,0 +1,96 @@
+@import url(./tokens.css);
+
+/* XLL */
+.heading-xxl-bold {
+  font-size: var(--font-size-heading-xxl);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-bold);
+}
+
+.heading-xxl-medium {
+  font-size: var(--font-size-heading-xxl);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-medium);
+}
+
+.heading-xxl-regular {
+  font-size: var(--font-size-heading-xxl);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-regular);
+}
+
+/* XL */
+.heading-xl-bold {
+  font-size: var(--font-size-heading-xl);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-bold);
+}
+
+.heading-xl-medium {
+  font-size: var(--font-size-heading-xl);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-medium);
+}
+
+.heading-xl-regular {
+  font-size: var(--font-size-heading-xl);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-regular);
+}
+
+/* L */
+.heading-l-bold {
+  font-size: var(--font-size-heading-l);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-bold);
+}
+
+.heading-l-medium {
+  font-size: var(--font-size-heading-l);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-medium);
+}
+
+.heading-l-regular {
+  font-size: var(--font-size-heading-l);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-regular);
+}
+
+/* M */
+.heading-m-bold {
+  font-size: var(--font-size-heading-m);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-bold);
+}
+
+.heading-m-medium {
+  font-size: var(--font-size-heading-m);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-medium);
+}
+
+.heading-m-regular {
+  font-size: var(--font-size-heading-m);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-regular);
+}
+
+/* S */
+.heading-s-bold {
+  font-size: var(--font-size-heading-s);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-bold);
+}
+
+.heading-s-medium {
+  font-size: var(--font-size-heading-s);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-medium);
+}
+
+.heading-s-regular {
+  font-size: var(--font-size-heading-s);
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-regular);
+}

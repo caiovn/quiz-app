@@ -1,0 +1,41 @@
+[data-theme="light"] {
+  --color-surface-primary: #ef233c;
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f4f5f7;
+  --color-text-inverse: #ffffff;
+  --color-text-primary: #1e2e3b;
+  --color-text-secondary: #3a4c5c;
+  --color-accent: #ff5722;
+
+  /* Tokens do botão primário para light mode */
+  --color-button-primary-background: #ff5722;
+  --color-button-primary-background-hover: #e64a19;
+  --color-button-primary-background-active: #d84315;
+  --color-button-primary-background-disabled: #ffc1a1;
+  --color-button-primary-text: #ffffff;
+  --color-button-primary-text-disabled: #ffe6d6;
+
+  /* Tokens do botão secundário para light mode */
+  --color-button-secondary-background: #f4f5f7;
+  --color-button-secondary-background-hover: #e0e0e0;
+  --color-button-secondary-background-active: #bdbdbd;
+  --color-button-secondary-background-disabled: #f1f1f1;
+  --color-button-secondary-text: #1e2e3b;
+  --color-button-secondary-text-disabled: #a6a6a6;
+
+  /* Tokens do botão terciário para light mode */
+  --color-button-tertiary-background: transparent;
+  --color-button-tertiary-background-hover: #f4f5f74a;
+  --color-button-tertiary-background-active: #e0e0e0;
+  --color-button-tertiary-text: #1e2e3b;
+  --color-button-tertiary-text-hover: #000000;
+  --color-button-tertiary-text-disabled: #a6a6a6;
+
+  --color-icon-inverse: #ffffff;
+  --color-icon-neutral: #9e9e9e; /* Cor neutra para ícones */
+  --color-icon-primary: #1e2e3b; /* Cor padrão para ícones */
+  --color-icon-secondary: #9e9e9e; /* Ícones menos importantes ou desativados */
+  --color-icon-hover: #000000; /* Cor ao passar o mouse sobre o ícone */
+  --color-icon-active: #ff5722; /* Ícone ativo, em interação ou foco */
+  --color-icon-disabled: #c7c7c7; /* Ícones desativados */
+}
