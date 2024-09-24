@@ -23,4 +23,11 @@
   --font-weight-bold: 700;
   --font-weight-medium: 500;
   --font-weight-regular: 400;
+
+  --font-size-link-l: 18px;
+  --font-size-link-m: 16px; /* Tamanho padrão do texto do link */
+  --font-size-link-s: 14px;
+
+  --font-weight-link-bold: 600;
+  --font-weight-link-regular: 400; /* Peso normal do texto do link */
 }

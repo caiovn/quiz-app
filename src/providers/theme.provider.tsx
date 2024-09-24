@@ -2,10 +2,10 @@
 "use client";
 import React, { createContext, ReactElement, useEffect, useState } from "react";
 
-const ThemeContext = createContext({ theme: "dark", setTheme: () => {} });
+const ThemeContext = createContext({ theme: "light", setTheme: () => {} });
 
 function ThemeProvider({ children }: { children: ReactElement }) {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
 
   useEffect(() => {
     handleChangeTheme();

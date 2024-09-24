@@ -19,11 +19,11 @@ export default function Navbar() {
       route: "/",
       icon: "home",
     },
-    {
-      label: "quizzes",
-      route: "/quiz",
-      icon: "bolt",
-    },
+    // {
+    //   label: "quizzes",
+    //   route: "/quiz",
+    //   icon: "bolt",
+    // },
   ];
 
   const toggleTheme = () => {
@@ -33,14 +33,14 @@ export default function Navbar() {
   return (
     <nav className={styles.nav}>
       <div>
-        {items.map((i, index) => (
-          <Link className={styles.link} href={i.route} key={index}>
-            <span>
+        <div>
+          {items.map((i, index) => (
+            <Link className={styles.link} href={i.route} key={index}>
               {i.icon && <Icon color="inverse">{i.icon}</Icon>}
-              {i.label}
-            </span>
-          </Link>
-        ))}
+              <span className="">{i.label}</span>
+            </Link>
+          ))}
+        </div>
         <Button onClick={toggleTheme} variant="tertiary">
           <Icon color="inverse">contrast</Icon>
         </Button>

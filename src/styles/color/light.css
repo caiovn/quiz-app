@@ -38,4 +38,10 @@
   --color-icon-hover: #000000; /* Cor ao passar o mouse sobre o ícone */
   --color-icon-active: #ff5722; /* Ícone ativo, em interação ou foco */
   --color-icon-disabled: #c7c7c7; /* Ícones desativados */
+
+  --color-link: #1e3a8a; /* Azul escuro padrão para links */
+  --color-link-hover: #ff5722; /* Laranja para hover */
+  --color-link-active: #d84315; /* Laranja escuro para estado ativo */
+  --color-link-visited: #6b46c1; /* Roxo para links visitados */
+  --color-link-disabled: #bdbdbd;
 }

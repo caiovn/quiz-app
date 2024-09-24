@@ -1,5 +1,6 @@
 [data-theme="dark"] {
   --color-surface-primary: #ef233c;
+  --color-background-inverse: #ffffff;
   --color-background-primary: #1e1e1e;
   --color-background-secondary: #2b2b2b;
   --color-text-inverse: #ffffff;
@@ -37,4 +38,10 @@
   --color-icon-hover: #ffffff; /* Cor ao passar o mouse no modo escuro */
   --color-icon-active: #ff7043; /* Cor de ícones ativos no modo escuro */
   --color-icon-disabled: #616161; /* Ícones desativados no modo escuro */
+
+  --color-link: #8ab4f8; /* Azul claro para links no modo escuro */
+  --color-link-hover: #ffa726; /* Laranja claro para hover */
+  --color-link-active: #ff7043; /* Laranja vibrante para ativo */
+  --color-link-visited: #ce93d8; /* Roxo claro para links visitados */
+  --color-link-disabled: #757575;
 }

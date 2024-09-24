@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
 import "./global.css";
-import styles from "./app.module.css";
+import styles from "./_app.module.css";
 import { Navbar } from "@/components";
 import { Providers } from "@/providers";
 
