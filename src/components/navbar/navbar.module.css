@@ -1,0 +1,22 @@
+.nav {
+  margin: 0;
+  margin-bottom: 16px;
+  background-color: var(--color-surface-primary);
+}
+
+.nav > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 16px 32px;
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.link {
+  display: flex;
+  align-items: stretch;
+  text-decoration: none !important;
+  color: var(--color-text-inverse) !important;
+}

@@ -1,0 +1,55 @@
+@import url("./tokens.css");
+
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+  text-decoration: none;
+}
+
+a:active {
+  color: var(--color-link-active);
+  font-weight: var(--font-weight-link-bold);
+}
+
+a:visited {
+  color: var(--color-link-visited);
+}
+
+a:disabled {
+  color: var(--color-link-disabled);
+  text-decoration: none;
+}
+
+.link-l-bold {
+  font-size: var(--font-size-link-l);
+  font-weight: var(--font-weight-link-bold);
+}
+
+.link-l-regular {
+  font-size: var(--font-size-link-l);
+  font-weight: var(--font-weight-link-regular);
+}
+
+.link-m-bold {
+  font-size: var(--font-size-link-m);
+  font-weight: var(--font-weight-link-bold);
+}
+
+.link-m-regular {
+  font-size: var(--font-size-link-m);
+  font-weight: var(--font-weight-link-regular);
+}
+
+.link-s-bold {
+  font-size: var(--font-size-link-s);
+  font-weight: var(--font-weight-link-bold);
+}
+
+.link-s-regular {
+  font-size: var(--font-size-link-s);
+  font-weight: var(--font-weight-link-regular);
+}
