@@ -19,11 +19,11 @@ export default function Navbar() {
       route: "/",
       icon: "home",
     },
-    // {
-    //   label: "quizzes",
-    //   route: "/quiz",
-    //   icon: "bolt",
-    // },
+    {
+      label: "quizzes",
+      route: "/quiz",
+      icon: "bolt",
+    },
   ];
 
   const toggleTheme = () => {
@@ -31,9 +31,9 @@ export default function Navbar() {
     setTheme();
   };
   return (
-    <nav className={styles.nav}>
-      <div>
-        <div>
+    <nav className={styles.navWrapper}>
+      <div className={styles.navContent}>
+        <div className={styles.navList}>
           {items.map((i, index) => (
             <Link className={styles.link} href={i.route} key={index}>
               {i.icon && <Icon color="inverse">{i.icon}</Icon>}
