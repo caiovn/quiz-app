@@ -13,6 +13,8 @@ export default function Home() {
           Desafie seu conhecimento com nossos quizzes interativos!
         </h1>
         <Button variant="primary">Comece Agora</Button>
+        <Button variant="secondary">Comece Agora</Button>
+        <Button variant="tertiary">Comece Agora</Button>
       </div>
       <figure>
         <Image

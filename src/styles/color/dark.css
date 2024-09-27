@@ -6,6 +6,7 @@
   --color-text-inverse: #ffffff;
   --color-text-primary: #e2e3e4;
   --color-text-secondary: #c2c2c2;
+  --color-text-error: #ff5252;
   --color-accent: #ff5722;
 
   /* Tokens do botão primário para dark mode */
@@ -44,4 +45,11 @@
   --color-link-active: #ff7043; /* Laranja vibrante para ativo */
   --color-link-visited: #ce93d8; /* Roxo claro para links visitados */
   --color-link-disabled: #757575;
+
+  --color-background-input: #1e1e1e; /* Cinza escuro para fundo do input no modo escuro */
+  --color-background-input-disabled: #333333; /* Cinza mais escuro para input desabilitado no dark */
+  --color-border-input: #555555; /* Cinza para borda no modo escuro */
+  --color-border-input-focus: #7986cb; /* Azul claro para borda ao focar no modo escuro */
+  --color-border-input-error: #ff5252; /* Vermelho claro para borda de erro no dark mode */
+  --color-border-input-disabled: #757575; /* Cinza escuro para input desabilitado no modo escuro */
 }
