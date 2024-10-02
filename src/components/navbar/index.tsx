@@ -12,7 +12,7 @@ type NavBarItem = {
 };
 
 export default function Navbar() {
-  const { setTheme, theme } = useContext(ThemeContext);
+  const { setTheme } = useContext(ThemeContext);
   const items: NavBarItem[] = [
     {
       label: "Home",
@@ -26,10 +26,6 @@ export default function Navbar() {
     },
   ];
 
-  const toggleTheme = () => {
-    console.log("aquiii", theme);
-    setTheme();
-  };
   return (
     <nav className={styles.navWrapper}>
       <div className={styles.navContent}>
@@ -41,7 +37,7 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <Button onClick={toggleTheme} variant="tertiary">
+        <Button onClick={setTheme} variant="tertiary">
           <Icon color="inverse">contrast</Icon>
         </Button>
       </div>

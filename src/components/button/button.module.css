@@ -1,4 +1,6 @@
 .button {
+  display: flex;
+  align-items: center;
   border: none;
   border-radius: 8px;
   padding: 8px 12px;
@@ -13,6 +15,15 @@
   background-color: var(--color-button-primary-background-hover);
 }
 
+.button-primary:disabled {
+  background-color: var(--color-button-primary-background-disabled) !important;
+  color: var(--color-button-primary-text-disabled);
+}
+
+.button-primary:active {
+  background-color: var(--color-button-primary-background-active);
+}
+
 .button-secondary {
   background-color: var(--color-button-secondary-background-hover);
   color: var(--color-button-secondary-text);
@@ -22,6 +33,17 @@
   background-color: var(--color-button-secondary-background-hover);
 }
 
+.button-secondary:disabled {
+  background-color: var(
+    --color-button-secondary-background-disabled
+  ) !important;
+  color: var(--color-button-secondary-text-disabled);
+}
+
+.button-secondary:active {
+  background-color: var(--color-button-secondary-background-active);
+}
+
 .button-tertiary {
   background: var(--color-button-tertiary-background);
   color: var(--color-button-tertiary-text);
@@ -29,4 +51,13 @@
 
 .button-tertiary:hover {
   background-color: var(--color-button-tertiary-background-hover);
+}
+
+.button-tertiary:disabled {
+  background-color: var(--color-button-tertiary-background-disabled) !important;
+  color: var(--color-button-tertiary-text-disabled);
+}
+
+.button-tertiary:active {
+  background-color: var(--color-button-tertiary-background-active);
 }

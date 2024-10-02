@@ -13,6 +13,7 @@ export default function Document() {
         <Main />
         <NextScript />
       </body>
+      <div className="overlay" />
     </Html>
   );
 }
