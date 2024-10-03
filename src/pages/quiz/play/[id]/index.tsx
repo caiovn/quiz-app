@@ -1,10 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unused-expressions */
+import styles from "./play.module.css";
 import { Quiz } from "@/api/quiz/domain/domain/quiz";
 import { QuizApi } from "@/api/quiz/quiz.api";
 import { Button } from "@/components";
 import { LoadingContext } from "@/providers/loading.provider";
+import cn from "classnames";
 import { useRouter } from "next/router";
 import { useCallback, useContext, useEffect, useState } from "react";
+
+type AnswerFeedbackMessage = "success" | "fail" | "delayed" | "finished";
 
 export default function Play() {
   const setLoading = useContext(LoadingContext);
@@ -13,15 +17,12 @@ export default function Play() {
   const [quiz, setQuiz] = useState<Quiz>();
   const [questionIndex, setQuestionIndex] = useState(0);
   const [answerFeedback, setAnswerFeedback] = useState<
-    "success" | "fail" | "delayed" | "finished" | undefined
+    AnswerFeedbackMessage | undefined
   >(undefined);
-  const answerFeedbackMessage: Record<
-    "success" | "fail" | "delayed" | "finished",
-    string
-  > = {
-    delayed: "esqueceu de responde :(",
-    fail: "ERRRROUUUU!",
-    success: "ACERTOUUUU",
+  const answerFeedbackMessage: Record<AnswerFeedbackMessage, string> = {
+    delayed: "Tempo esgotado",
+    fail: "Resposta errada",
+    success: "Resposta correta",
     finished: `Quiz terminado! Você acertou ${score} de ${quiz?.questions.length}`,
   };
 
@@ -38,13 +39,10 @@ export default function Play() {
       setAnswerFeedback(undefined);
       setQuestionIndex((current) => current + 1);
       setCounter(20);
-
-      console.log(questionIndex);
     }, 3000);
   }, [questionIndex, quiz]);
 
   useEffect(() => {
-    console.log("triggou");
     setLoading(true);
     const id = String(router.query.id || "");
     console.log(id);
@@ -77,14 +75,10 @@ export default function Play() {
   const verifyAnswer = (selectedAnswer: string, correctAnswer: string) => {
     setCounter(undefined);
 
-    console.log(selectedAnswer, correctAnswer);
-
     if (selectedAnswer !== correctAnswer) {
       setAnswerFeedback("fail");
-      console.log("fail");
     } else {
       console.log("success");
-      setAnswerFeedback("success");
       incrementScore();
     }
 
@@ -98,35 +92,60 @@ export default function Play() {
   return (
     <>
       {quiz && (
-        <div>
+        <div className={styles.playQuizWrapper}>
           {!answerFeedback ? (
             <>
-              {`${questionIndex + 1} de ${quiz.questions.length} perguntas`}
-              {counter && <p>{`TIMER: ${counter}`}</p>}
-              <h1 className="heading-l-bold">{quiz.name}</h1>
-              {quiz.questions[questionIndex].title}
-              {quiz.questions[questionIndex].answers.map((a) => (
-                <Button
-                  variant="secondary"
-                  key={a.index}
-                  disabled={!!answerFeedback}
-                  onClick={() =>
-                    verifyAnswer(
-                      a.index,
-                      quiz.questions[questionIndex].correctAnswer
-                    )
-                  }
-                >
-                  {a.text}
-                </Button>
-              ))}
+              <span className={cn(styles.generalInfo, "body-m-regular")}>
+                <p>
+                  {`${questionIndex + 1} de ${quiz.questions.length} perguntas`}
+                </p>
+                {counter && (
+                  <p>
+                    TIMER:&nbsp;
+                    <strong>{counter}</strong>
+                  </p>
+                )}
+              </span>
+              <div className={styles.questionWrapper}>
+                <h1 className="heading-l-bold">{quiz.name}</h1>
+                <div>
+                  <p className="heading-s-medium">
+                    {quiz.questions[questionIndex].title}
+                  </p>
+                  <div className={styles.answersWrapper}>
+                    {quiz.questions[questionIndex].answers.map((a) => (
+                      <Button
+                        variant="secondary"
+                        size="large"
+                        key={a.index}
+                        disabled={!!answerFeedback}
+                        onClick={() =>
+                          verifyAnswer(
+                            a.index,
+                            quiz.questions[questionIndex].correctAnswer
+                          )
+                        }
+                      >
+                        {a.text}
+                      </Button>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </>
           ) : (
-            <>
-              <p className="body-l-bold">
-                {answerFeedbackMessage[answerFeedback]}
-              </p>
-            </>
+            <div className={cn("heading-l-bold", styles.answerFeedback)}>
+              <p>{answerFeedbackMessage[answerFeedback]}</p>
+              {answerFeedback === "finished" && (
+                <Button
+                  variant="primary"
+                  size="large"
+                  onClick={() => router.push("/quiz")}
+                >
+                  Voltar para home
+                </Button>
+              )}
+            </div>
           )}
         </div>
       )}

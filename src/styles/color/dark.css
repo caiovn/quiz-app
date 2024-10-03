@@ -55,4 +55,5 @@
   --color-border-input-disabled: #757575; /* Cinza escuro para input desabilitado no modo escuro */
 
   --color-overlay-modal: rgba(0, 0, 0, 0.7);
+  --color-outline-focus: rgba(255, 255, 255, 0.4);
 }

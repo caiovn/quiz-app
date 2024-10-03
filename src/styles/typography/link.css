@@ -5,6 +5,11 @@ a {
   text-decoration: underline;
 }
 
+a:focus {
+  outline: 2px solid var(--color-outline-focus);
+  outline-offset: 2px;
+}
+
 a:hover {
   color: var(--color-link-hover);
   text-decoration: none;

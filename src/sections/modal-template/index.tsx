@@ -1,6 +1,8 @@
+import FocusTrap from "focus-trap-react";
 import styles from "./modal-template.module.css";
 import { Button, Icon } from "@/components";
-import { ReactNode, ReactPortal } from "react";
+import React from "react";
+import { ReactNode, ReactPortal, useCallback, useEffect } from "react";
 import { createPortal } from "react-dom";
 
 const createPortalStructure = (
@@ -10,7 +12,16 @@ const createPortalStructure = (
   return createPortal(
     <>
       <div className="overlay-background" />
-      <div className="overlay-modal">{children}</div>
+      <FocusTrap>
+        <div
+          className="overlay-modal"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="dialog_label"
+        >
+          {children}
+        </div>
+      </FocusTrap>
     </>,
     elm
   );
@@ -31,6 +42,23 @@ export default function ModalTemplate({
   cancelButtonText?: string;
   onClose: (_: ModalTemplateOnClose) => void;
 }) {
+  const escFunction = useCallback(
+    (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        onClose("DISMISS");
+      }
+    },
+    [onClose]
+  );
+
+  useEffect(() => {
+    document.addEventListener("keydown", escFunction, false);
+
+    return () => {
+      document.removeEventListener("keydown", escFunction, false);
+    };
+  }, [escFunction]);
+
   const overlayElm = document.querySelector(".overlay");
   return (
     <>
@@ -44,8 +72,10 @@ export default function ModalTemplate({
             >
               <Icon>close</Icon>
             </Button>
-            <h1 className="heading-m-bold">{title}</h1>
-            {subTitle && <p className="body-m-regular">{title}</p>}
+            <h1 className="heading-m-bold" id="">
+              {title}
+            </h1>
+            {subTitle && <p className="body-m-regular">{subTitle}</p>}
             <div className={styles.buttons}>
               {cancelButtonText && (
                 <Button variant="secondary" onClick={() => onClose("CANCEL")}>

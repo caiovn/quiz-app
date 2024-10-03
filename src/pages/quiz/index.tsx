@@ -46,16 +46,6 @@ export default function QuizList() {
   const clickDeleteCard = (quiz: Quiz) => {
     setSelectedQuizId(quiz.id!);
     setShowPortal(true);
-    // setLoading(true);
-    // QuizApi.delete(quiz.id!).then(
-    //   () => {
-    //     getQuizList();
-    //     setLoading(false);
-    //   },
-    //   (err) => {
-    //     console.error(err);
-    //   }
-    // );
   };
 
   const [selectedQuizId, setSelectedQuizId] = useState<string>("");

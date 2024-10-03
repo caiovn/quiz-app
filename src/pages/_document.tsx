@@ -11,9 +11,9 @@ export default function Document() {
       </Head>
       <body>
         <Main />
-        <NextScript />
       </body>
       <div className="overlay" />
+      <NextScript />
     </Html>
   );
 }
