@@ -1,0 +1,23 @@
+.modalWrapper {
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-background-primary);
+  padding: 16px;
+  border-radius: 12px;
+}
+.buttons {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.closeButton {
+  margin-bottom: 16px;
+  align-self: flex-end;
+}
+
+.modalWrapper > h1 {
+  margin: 0;
+}

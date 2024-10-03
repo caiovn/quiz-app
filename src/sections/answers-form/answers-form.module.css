@@ -1,0 +1,26 @@
+.correctAnswerContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.answersList {
+  margin-left: 16px;
+}
+
+.answerItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.deleteBtn,
+.addbtn {
+  margin-top: 8px;
+}
+
+.answersErrorMessage {
+  display: block;
+  color: var(--color-text-error);
+  margin-bottom: 16px;
+}

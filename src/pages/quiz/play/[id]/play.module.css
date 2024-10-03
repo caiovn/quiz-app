@@ -1,0 +1,28 @@
+.playQuizWrapper {
+  height: calc(100vh - 128px);
+}
+
+.answersWrapper {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.generalInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.answerFeedback {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.questionWrapper {
+  margin-top: 32px;
+}

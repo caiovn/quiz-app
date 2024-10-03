@@ -1,0 +1,22 @@
+.cardsContainer {
+  display: flex;
+  gap: 16px;
+  margin: 0 auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.loading {
+  margin: 64px auto;
+  width: fit-content;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.createButton {
+  margin-bottom: 16px;
+}

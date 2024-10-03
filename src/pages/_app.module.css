@@ -1,5 +1,5 @@
 .page {
   max-width: var(--max-width);
-  padding: 0 32px;
+  padding: 32px;
   margin: auto auto;
 }

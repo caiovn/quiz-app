@@ -1,0 +1,49 @@
+.selectWrapper {
+  position: relative;
+  width: 100%; /* Ajustável conforme o design */
+  margin-bottom: 16px;
+}
+
+.selectWrapper label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--color-text-primary); /* Token de cor de texto padrão */
+}
+
+.selectWrapper select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: var(--color-text-primary); /* Cor do texto do select */
+  background-color: var(--color-background-input); /* Cor de fundo do select */
+  border: 1px solid var(--color-border-input); /* Borda padrão do input */
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  appearance: none; /* Remove o estilo padrão do select */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+.selectWrapper select:focus {
+  border-color: var(--color-border-input-focus); /* Cor da borda ao focar */
+  outline: none; /* Remove o outline padrão */
+}
+
+.selectWrapper select:disabled {
+  background-color: var(
+    --color-background-input-disabled
+  ); /* Cor de fundo desabilitado */
+  border-color: var(
+    --color-border-input-disabled
+  ); /* Cor da borda desabilitado */
+  color: var(--color-text-disabled); /* Cor do texto desabilitado */
+}
+
+.selectWrapper .error {
+  color: var(--color-text-error); /* Token de cor de texto de erro */
+  margin-top: 8px;
+  font-size: 12px;
+}
