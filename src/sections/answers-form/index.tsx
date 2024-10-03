@@ -2,6 +2,7 @@ import styles from "./answers-form.module.css";
 import { Select, Input, Button, Icon } from "@/components";
 import { defaultAnswerValue } from "@/funcs/quiz.func";
 import { QuizFormSchema } from "@/schemas/create-quiz.schema";
+import cn from "classnames";
 import { UseFormReturn, useFieldArray } from "react-hook-form";
 
 type AnswersFormArrayProps = {
@@ -54,6 +55,11 @@ export default function AnswersFormArray({
           </div>
         )}
       </div>
+      {errors.questions?.[nestedIndex]?.answers && (
+        <span className={cn("body-s-regular", styles.answersErrorMessage)}>
+          {errors.questions?.[nestedIndex]?.answers.message}
+        </span>
+      )}
       <div className={styles.answersList}>
         {fields.map((answers, index) => {
           return (

@@ -29,12 +29,12 @@ export default function Play() {
 
   const nextQuestion = useCallback(() => {
     setCounter(undefined);
-    if (questionIndex + 1 === quiz?.questions.length) {
-      setAnswerFeedback("finished");
-      return;
-    }
-
     setTimeout(() => {
+      if (questionIndex + 1 === quiz?.questions.length) {
+        setAnswerFeedback("finished");
+        return;
+      }
+
       setAnswerFeedback(undefined);
       setQuestionIndex((current) => current + 1);
       setCounter(20);

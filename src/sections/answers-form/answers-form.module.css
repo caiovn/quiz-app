@@ -18,3 +18,9 @@
 .addbtn {
   margin-top: 8px;
 }
+
+.answersErrorMessage {
+  display: block;
+  color: var(--color-text-error);
+  margin-bottom: 16px;
+}

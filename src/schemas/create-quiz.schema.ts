@@ -16,7 +16,7 @@ export const questionsArrayFormSchema = z.object({
   }),
   answers: answersArrayFormSchema
     .array()
-    .min(2, { message: "É necessário ter menos 2 (duas) perguntas" }),
+    .min(2, { message: "É necessário ter pelo menos duas perguntas" }),
 });
 
 export const quizFormSchema = z.object({

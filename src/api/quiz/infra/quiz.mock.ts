@@ -9,54 +9,54 @@ export const QUIZ_LIST_MOCK: Quiz[] = [
     questions: [
       {
         title: "Qual o nome dos gatos dele?",
-        correctAnswer: "1",
+        correctAnswer: "0",
         answers: [
           {
-            index: "1",
+            index: "0",
             text: "Tonico e Tinoco",
           },
-          { index: "2", text: "Tom e Jerry" },
-          { index: "3", text: "Tico e Teco" },
-          { index: "4", text: "Fred e Barney" },
+          { index: "1", text: "Tom e Jerry" },
+          { index: "2", text: "Tico e Teco" },
+          { index: "3", text: "Fred e Barney" },
         ],
       },
       {
         title: "Qual o nome dos cachorro dele?",
-        correctAnswer: "3",
+        correctAnswer: "2",
         answers: [
-          { index: "1", text: "Joca" },
-          { index: "2", text: "Thor" },
+          { index: "0", text: "Joca" },
+          { index: "1", text: "Thor" },
           {
-            index: "3",
+            index: "2",
             text: "Theo",
           },
-          { index: "4", text: "baby" },
+          { index: "3", text: "baby" },
         ],
       },
       {
         title: "Qual o dia do aniversario dele?",
-        correctAnswer: "4",
+        correctAnswer: "3",
         answers: [
-          { index: "1", text: "28 de outubro" },
-          { index: "2", text: "24 de julho" },
+          { index: "0", text: "28 de outubro" },
+          { index: "1", text: "24 de julho" },
           {
-            index: "3",
+            index: "2",
             text: "27 de outubro",
           },
-          { index: "4", text: "11 de agosto" },
+          { index: "3", text: "11 de agosto" },
         ],
       },
       {
         title: "Ele trabalha com o que?",
-        correctAnswer: "3",
+        correctAnswer: "2",
         answers: [
-          { index: "1", text: "Java" },
-          { index: "2", text: "Python" },
+          { index: "0", text: "Java" },
+          { index: "1", text: "Python" },
           {
-            index: "3",
+            index: "2",
             text: "Javascript",
           },
-          { index: "4", text: "COBOL" },
+          { index: "3", text: "COBOL" },
         ],
       },
     ],
@@ -68,15 +68,15 @@ export const QUIZ_LIST_MOCK: Quiz[] = [
     questions: [
       {
         title: "Qual o nome dos gatos dele?",
-        correctAnswer: "1",
+        correctAnswer: "10",
         answers: [
           {
-            index: "1",
+            index: "0",
             text: "Tonico e Tinoco",
           },
-          { index: "2", text: "Tom e Jerry" },
-          { index: "3", text: "Tico e Teco" },
-          { index: "4", text: "Fred e Barney" },
+          { index: "1", text: "Tom e Jerry" },
+          { index: "2", text: "Tico e Teco" },
+          { index: "3", text: "Fred e Barney" },
         ],
       },
     ],
@@ -88,15 +88,15 @@ export const QUIZ_LIST_MOCK: Quiz[] = [
     questions: [
       {
         title: "Qual o nome dos gatos dele?",
-        correctAnswer: "1",
+        correctAnswer: "0",
         answers: [
           {
-            index: "1",
+            index: "0",
             text: "Tonico e Tinoco",
           },
-          { index: "2", text: "Tom e Jerry" },
-          { index: "3", text: "Tico e Teco" },
-          { index: "4", text: "Fred e Barney" },
+          { index: "1", text: "Tom e Jerry" },
+          { index: "2", text: "Tico e Teco" },
+          { index: "3", text: "Fred e Barney" },
         ],
       },
     ],

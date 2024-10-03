@@ -32,13 +32,14 @@ export default function Create(props: CreateProps) {
   const quizForm = useForm<QuizFormSchema>({
     resolver: zodResolver(quizFormSchema),
     defaultValues: initialValue,
+    mode: "onBlur",
   });
 
   const {
     register,
     handleSubmit,
     setValue,
-    formState: { errors },
+    formState: { errors, isValid },
   } = quizForm;
 
   const patchForm = useCallback(() => {
@@ -100,7 +101,12 @@ export default function Create(props: CreateProps) {
 
         <QuestionsForm form={quizForm} />
 
-        <Button className={styles.button} variant="primary" type="submit">
+        <Button
+          className={styles.button}
+          disabled={!isValid}
+          variant="primary"
+          type="submit"
+        >
           Enviar
         </Button>
       </form>
