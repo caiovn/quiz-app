@@ -1,5 +1,5 @@
 import { QuizFormSchema } from "@/schemas/create-quiz.schema";
-import { Quiz } from "../../domain/domain/quiz";
+import { Quiz } from "../../domain/model/quiz";
 
 export const quizMapper = {
   mapFromSchema: (param: QuizFormSchema): Quiz => {

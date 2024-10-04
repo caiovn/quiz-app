@@ -1,4 +1,4 @@
-import { Quiz } from "../domain/domain/quiz";
+import { Quiz } from "../domain/model/quiz";
 
 export const QUIZ_LIST_MOCK: Quiz[] = [
   {

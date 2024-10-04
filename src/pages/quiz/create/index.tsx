@@ -13,7 +13,7 @@ import { useRouter } from "next/router";
 import { appendQuestion } from "@/funcs/quiz.func";
 import QuestionsForm from "../../../sections/questions-form";
 import { LoadingContext } from "@/providers/loading.provider";
-import { Quiz } from "@/api/quiz/domain/domain/quiz";
+import { Quiz } from "@/api/quiz/domain/model/quiz";
 
 const initialValue: QuizFormSchema = {
   name: "",
@@ -90,18 +90,25 @@ export default function Create(props: CreateProps) {
           register={register("name")}
           label="Nome"
           error={errors.name}
-          inputProps={{ maxLength: 30 }}
+          inputProps={{
+            maxLength: 30,
+            ["data-testid"]: "quiz-form-name-input",
+          }}
         />
         <Input
           register={register("description")}
           label="Descrição"
           error={errors.description}
-          inputProps={{ maxLength: 350 }}
+          inputProps={{
+            maxLength: 350,
+            ["data-testid"]: "quiz-form-description-input",
+          }}
         />
 
         <QuestionsForm form={quizForm} />
 
         <Button
+          data-testid="submit-quiz-form-btn"
           className={styles.button}
           disabled={!isValid}
           variant="primary"

@@ -1,4 +1,4 @@
-import { Quiz } from "@/api/quiz/domain/domain/quiz";
+import { Quiz } from "@/api/quiz/domain/model/quiz";
 import Button, { ButtonVariant } from "../button";
 import styles from "./quiz-card.module.css";
 import cn from "classnames";

@@ -1,5 +1,5 @@
 import { QuizFormSchema } from "@/schemas/create-quiz.schema";
-import { Quiz } from "./domain/quiz";
+import { Quiz } from "./model/quiz";
 
 export type TQuizRepository = {
   list: () => Promise<Quiz[]>;

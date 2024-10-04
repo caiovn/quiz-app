@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 import styles from "./play.module.css";
-import { Quiz } from "@/api/quiz/domain/domain/quiz";
+import { Quiz } from "@/api/quiz/domain/model/quiz";
 import { QuizApi } from "@/api/quiz/quiz.api";
 import { Button } from "@/components";
 import { LoadingContext } from "@/providers/loading.provider";

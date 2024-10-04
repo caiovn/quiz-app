@@ -4,7 +4,9 @@ import cn from "classnames";
 
 type InputProps = {
   label: string;
-  inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
+  inputProps?: React.InputHTMLAttributes<HTMLInputElement> & {
+    ["data-testid"]?: string;
+  };
   register?: UseFormRegisterReturn;
   error?: FieldError;
 };

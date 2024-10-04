@@ -15,7 +15,11 @@ export default function Home() {
           <h1 className="heading-m-bold">
             Desafie seu conhecimento com nossos quizzes interativos!
           </h1>
-          <Button variant="primary" onClick={() => router.push("/quiz")}>
+          <Button
+            variant="primary"
+            data-testid="home-navigate-quiz-btn"
+            onClick={() => router.push("/quiz")}
+          >
             Comece Agora
           </Button>
         </div>

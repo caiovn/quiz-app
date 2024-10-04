@@ -1,4 +1,4 @@
-import { Quiz } from "@/api/quiz/domain/domain/quiz";
+import { Quiz } from "@/api/quiz/domain/model/quiz";
 import { QuizApi } from "@/api/quiz/quiz.api";
 import { Button, Icon, QuizCard } from "@/components";
 import { useRouter } from "next/router";

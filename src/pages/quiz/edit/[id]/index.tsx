@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Create from "../../create";
 import { useEffect, useState } from "react";
 import { QuizApi } from "@/api/quiz/quiz.api";
-import { Quiz } from "@/api/quiz/domain/domain/quiz";
+import { Quiz } from "@/api/quiz/domain/model/quiz";
 
 export default function Edit() {
   const router = useRouter();

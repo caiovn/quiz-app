@@ -1,5 +1,5 @@
 import { v4 as uuidV4 } from "uuid";
-import { Quiz } from "../domain/domain/quiz";
+import { Quiz } from "../domain/model/quiz";
 import { TQuizRepository } from "../domain/quiz.repository";
 import { QUIZ_LIST_MOCK } from "./quiz.mock";
 import { QuizFormSchema } from "@/schemas/create-quiz.schema";
