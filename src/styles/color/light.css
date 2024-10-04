@@ -56,5 +56,5 @@
 
   --color-overlay-modal: rgba(0, 0, 0, 0.5);
   --color-outline-focus: rgba(0, 0, 0, 0.25);
-  --color-outline-focus: rgba(255, 255, 255, 0.4);
+  --color-outline-focus: rgba(0, 0, 0, 0.4);
 }

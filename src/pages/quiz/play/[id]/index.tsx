@@ -79,6 +79,7 @@ export default function Play() {
       setAnswerFeedback("fail");
     } else {
       console.log("success");
+      setAnswerFeedback("success");
       incrementScore();
     }
 
