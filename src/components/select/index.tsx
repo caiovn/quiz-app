@@ -3,12 +3,15 @@ import { FieldError, UseFormRegisterReturn } from "react-hook-form";
 
 export type SelectProps = {
   label: string;
-  inputProps?: React.SelectHTMLAttributes<HTMLSelectElement>;
+  inputProps?: React.SelectHTMLAttributes<HTMLSelectElement> & {
+    ["data-testid"]: string;
+  };
   register?: UseFormRegisterReturn;
   error?: FieldError;
   options: OptionProps[];
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type OptionProps = { label: string; value: any };
 
 export default function Select({
@@ -29,7 +32,14 @@ export default function Select({
           </option>
         ))}
       </select>
-      {error && <p className={styles.error}>{error.message}</p>}
+      {error && (
+        <p
+          className={styles.error}
+          data-testid={`${inputProps?.["data-testid"]}-error-message`}
+        >
+          {error.message}
+        </p>
+      )}
     </div>
   );
 }

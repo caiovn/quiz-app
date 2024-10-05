@@ -2,6 +2,7 @@ import React, { useCallback } from "react";
 import { LoadingSpinner } from "@/components";
 import { createContext, ReactElement, useState } from "react";
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const LoadingContext = createContext((_: boolean) => {});
 
 export default function LoadingProvider({

@@ -29,7 +29,10 @@ export default function Input({
         {...register}
         className={cn(inputProps?.className, error ? styles.inputOnError : "")}
       />
-      <p className={cn("caption-l-regular", styles.error)}>
+      <p
+        className={cn("caption-l-regular", styles.error)}
+        data-testid={`${inputProps?.["data-testid"]}-error-msg`}
+      >
         {error && error.message}
       </p>
     </div>

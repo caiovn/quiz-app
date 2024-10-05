@@ -28,6 +28,8 @@ export default function QuestionsForm({ form }: AnswersFormArrayProps) {
       <div className={styles.questionsTitle}>
         <h2>Perguntas</h2>
         <Button
+          aria-label="Adicionar nova pergunta"
+          data-testid="question-form-add"
           variant="tertiary"
           type="button"
           onClick={() => append(appendQuestion())}
@@ -36,7 +38,10 @@ export default function QuestionsForm({ form }: AnswersFormArrayProps) {
         </Button>
       </div>
       {errors.questions && (
-        <span className={cn("body-s-regular", styles.questionsErrorsMessage)}>
+        <span
+          data-testid={`question-form-error-message`}
+          className={cn("body-s-regular", styles.questionsErrorsMessage)}
+        >
           {errors.questions.message}
         </span>
       )}
@@ -44,6 +49,8 @@ export default function QuestionsForm({ form }: AnswersFormArrayProps) {
         {fields.map((q, index) => (
           <div key={q.id} className={styles.questionItem}>
             <Button
+              aria-label={`Apagar pergunta ${index + 1}`}
+              data-testid={`question-form-delete-${index}-btn`}
               className={styles.deleteBtn}
               variant="tertiary"
               type="button"
@@ -53,7 +60,10 @@ export default function QuestionsForm({ form }: AnswersFormArrayProps) {
             </Button>
             <Input
               label={`Título da pergunta #${index + 1}`}
-              inputProps={{ placeholder: `Pergunta ${index + 1}` }}
+              inputProps={{
+                placeholder: `Pergunta ${index + 1}`,
+                ["data-testid"]: `question-form-title-${index}-input`,
+              }}
               register={register(`questions.${index}.title`)}
               error={errors.questions?.[index]?.title}
             ></Input>

@@ -1,4 +1,4 @@
-import { Button, Input, LoadingSpinner } from "@/components";
+import { Button, Input } from "@/components";
 import {
   quizFormSchema,
   QuizFormSchema,
@@ -82,7 +82,7 @@ export default function Create(props: CreateProps) {
 
   return (
     <div>
-      <h1 className="heading-m-bold">
+      <h1 className="heading-m-bold" data-testid="quiz-form-title">
         {isEdit ? "Editar quiz" : "Criar novo quiz"}
       </h1>
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>

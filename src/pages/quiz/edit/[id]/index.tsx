@@ -1,4 +1,3 @@
-"use client";
 import { useRouter } from "next/router";
 import Create from "../../create";
 import { useEffect, useState } from "react";
@@ -21,5 +20,5 @@ export default function Edit() {
       }
     );
   }, [router]);
-  return <>{quiz && <Create isEdit={true} quiz={quiz} id={quiz.id} />}</>;
+  return <>{quiz && <Create isEdit={true} quiz={quiz} />}</>;
 }

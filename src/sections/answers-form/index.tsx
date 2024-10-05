@@ -39,6 +39,9 @@ export default function AnswersFormArray({
     <div>
       <div className={styles.correctAnswerContainer}>
         <Select
+          inputProps={{
+            ["data-testid"]: `answer-form-correct-select-${nestedIndex}`,
+          }}
           label="Resposta correta"
           register={register(`questions.${nestedIndex}.correctAnswer`)}
           options={watchAnswers}
@@ -46,6 +49,7 @@ export default function AnswersFormArray({
         {fields.length < 4 && (
           <div className={styles.addbtn}>
             <Button
+              data-testid={`answer-form-add-${nestedIndex}}`}
               variant="tertiary"
               type="button"
               onClick={() => append({ text: "" })}
@@ -56,7 +60,10 @@ export default function AnswersFormArray({
         )}
       </div>
       {errors.questions?.[nestedIndex]?.answers && (
-        <span className={cn("body-s-regular", styles.answersErrorMessage)}>
+        <span
+          data-testid={`answer-form-error-message-${nestedIndex}`}
+          className={cn("body-s-regular", styles.answersErrorMessage)}
+        >
           {errors.questions?.[nestedIndex]?.answers.message}
         </span>
       )}
@@ -66,7 +73,10 @@ export default function AnswersFormArray({
             <div className={styles.answerItem} key={answers.id}>
               <Input
                 label={`Resposta #${index + 1}`}
-                inputProps={{ placeholder: defaultAnswerValue(index) }}
+                inputProps={{
+                  placeholder: defaultAnswerValue(index),
+                  ["data-testid"]: `answer-form-input-${nestedIndex}-${index}`,
+                }}
                 register={register(
                   `questions.${nestedIndex}.answers.${index}.text`
                 )}
@@ -74,6 +84,8 @@ export default function AnswersFormArray({
               ></Input>
               <div>
                 <Button
+                  aria-label={`Apagar resposta ${index + 1}`}
+                  data-testid={`answer-form-delete-${nestedIndex}-${index}`}
                   className={styles.deleteBtn}
                   variant="tertiary"
                   type="button"
