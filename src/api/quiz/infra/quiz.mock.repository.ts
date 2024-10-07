@@ -16,7 +16,6 @@ export const QuizMockRepository: TQuizRepository = {
   get: function (id: string): Promise<Quiz> {
     return new Promise((resolve, reject) => {
       const retrievedQuiz = QUIZ_LIST_MOCK.find((q) => q.id === id);
-      console.log("get", id, retrievedQuiz);
       setTimeout(() => {
         if (!!!retrievedQuiz) {
           reject("Quiz não encontrado");

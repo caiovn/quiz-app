@@ -45,7 +45,6 @@ export default function Play() {
   useEffect(() => {
     setLoading(true);
     const id = String(router.query.id || "");
-    console.log(id);
 
     if (!id) return;
 
@@ -55,7 +54,6 @@ export default function Play() {
         setLoading(false);
       },
       () => {
-        console.log("push", id);
         router.push("/quiz");
       }
     );
@@ -78,7 +76,6 @@ export default function Play() {
     if (selectedAnswer !== correctAnswer) {
       setAnswerFeedback("fail");
     } else {
-      console.log("success");
       setAnswerFeedback("success");
       incrementScore();
     }

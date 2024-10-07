@@ -33,8 +33,6 @@ export default function AnswersFormArray({
       value: index,
     })) || [];
 
-  console.log(errors);
-
   return (
     <div>
       <div className={styles.correctAnswerContainer}>

@@ -15,10 +15,8 @@ export default function QuizList() {
   const [showPortal, setShowPortal] = useState(false);
 
   const getQuizList = useCallback(() => {
-    console.log("get quizzes");
     QuizApi.list().then(
       (res) => {
-        console.log(res);
         setQuizList(res);
         setLoading(false);
       },
@@ -52,7 +50,6 @@ export default function QuizList() {
 
   const handleCloseModal = (data: ModalTemplateOnClose) => {
     setShowPortal(false);
-    console.log(data);
     if (data != "CONFIRM") {
       setSelectedQuizId("");
       return;

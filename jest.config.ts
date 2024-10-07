@@ -19,6 +19,7 @@ const config: Config = {
     "!<rootDir>/*.config.js",
     "!<rootDir>/coverage/**",
     "!<rootDir>/**/model/**",
+    "!<rootDir>/**/*.repository.ts",
   ],
   testPathIgnorePatterns: ["<rootDir>/node_modules/", "<rootDir>/.next/"],
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts", "<rootDir>/jest.config.ts"],
