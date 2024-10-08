@@ -100,7 +100,7 @@ export default function QuizList() {
       </div>
       <>
         {quizList && quizList.length > 0 ? (
-          <div className={styles.cardsContainer}>
+          <div className={styles.cardsContainer} data-testid="quiz-list-cards">
             {quizList.map((quiz, index) => (
               <QuizCard key={index} quiz={quiz} buttons={mountButtons(quiz)} />
             ))}

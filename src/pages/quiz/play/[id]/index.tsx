@@ -10,7 +10,7 @@ import { useCallback, useContext, useEffect, useState } from "react";
 
 type AnswerFeedbackMessage = "success" | "fail" | "delayed" | "finished";
 
-export default function Play() {
+export default function PlayQuiz() {
   const setLoading = useContext(LoadingContext);
   const router = useRouter();
   const [score, setScore] = useState<number>(0);
