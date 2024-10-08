@@ -72,9 +72,7 @@ export default function ModalTemplate({
             >
               <Icon>close</Icon>
             </Button>
-            <h1 className="heading-m-bold" id="">
-              {title}
-            </h1>
+            <h1 className="heading-m-bold">{title}</h1>
             {subTitle && <p className="body-m-regular">{subTitle}</p>}
             <div className={styles.buttons}>
               {cancelButtonText && (
