@@ -91,6 +91,7 @@ export default function QuizList() {
       <div className={styles.header}>
         <h1 className="heading-m-bold">Quizzes</h1>
         <Button
+          data-testid="create-quiz-btn"
           onClick={() => router.push("/quiz/create")}
           className={styles.createButton}
           variant="primary"
